@@ -1,0 +1,57 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.hero {
+    display: flex;
+    flex-direction: column;
+
+    &__img {
+        width: 35rem;
+        overflow: hidden;
+        margin-bottom: 1rem;
+        position: absolute;
+        right: 0;
+        bottom: -5rem;
+        border-radius: 1.5rem 0 0 5rem;
+        @media (min-width: 1200px) {
+            width: 60rem;
+            bottom: -6rem;
+        }
+    }
+
+    &__img,
+    .info__p {
+        display: none;
+        @include m.tablet {
+            display: block;
+        }
+    }
+}
+
+.info {
+    @include m.tablet {
+        margin-top: 8rem;
+    }
+
+    &__title {
+        text-align: center;
+        color: v.$blanco;
+        margin: 2rem 0;
+        @include m.tablet {
+            text-align: left;
+            font-family: v.$fuente_principal;
+        }
+    }
+
+    &__title,
+    &__p {
+        @include m.tablet {
+            max-width: 50rem;
+        }
+    }
+
+    &__p {
+        color: v.$blanco;
+        line-height: 1.8;
+    }
+}

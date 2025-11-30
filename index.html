@@ -3,15 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Real State</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./build/css/app.css">
 </head>
 <body>
+    <header class="header">
+        <div class="header__contenedor">
+            <div class="header__menu">
+                <img class="header__img" src="./build/img/logo.svg" alt="Logo Real State">
+                <nav class="menu">
+                    <ul>
+                        <li><a class="menu__element" href="#">Nosotros</a></li>
+                        <li><a class="menu__element" href="#">Propiedades</a></li>
+                        <li><a class="menu__element" href="#">Blog</a></li>
+                        <li><a class="menu__element" href="#">Testimoniales</a></li>
+                        <li><a class="menu__element" href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="hero">
+                <div class="info">
+                    <h1 class="info__title">Encuentra tu casa de lujo al mejor precio</h1>
+                    <p class="info__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ea pariatur dolores ducimus! Repellendus maiores nemo tempore, cupiditate pariatur expedita</p>
+                </div>
+                <div class="hero__img">
+                    <picture>
+                        <source srcset="./build/img/imagenHeader.avif" type="image/avif">
+                        <source srcset="./build/img/imagenHeader.webp" type="image/webp">
+                        <img src="./build/img/imagenHeader.jpg" alt="Imagen de  casa">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </header>
     <script src="./build/js/imagenes.js"></script>
 </body>
 </html>
