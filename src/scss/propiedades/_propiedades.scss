@@ -1,0 +1,80 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+@for $i from 1 through 6 {
+    .avif .card:nth-child(#{$i}) {
+        .card__title {
+            background-image: linear-gradient(180deg, transparent, rgba(0,0,0,0.2)), url('../img/propiedad_#{$i}.avif');
+        }
+    }
+
+    .noavif.webp .card:nth-child(#{$i}) {
+        .card__title {
+            background-image: linear-gradient(180deg, transparent, rgba(0,0,0,0.2)), url('../img/propiedad_#{$i}.webp');
+        }
+    }
+    
+
+    .noavif.nowebp .card:nth-child(#{$i}) {
+        .card__title {
+            background-image: linear-gradient(180deg, transparent, rgba(0,0,0,0.2)), url('../img/propiedad_#{$i}.jpg');
+        }
+    }
+}
+
+.propiedades {
+    background-color: v.$grisClaro;
+    padding: 5rem 0 3rem;
+    &__title {
+        font-weight: 400;
+        text-transform: capitalize;
+        margin: 0 0 2rem 0;
+        &::after {
+            @include m.title;
+        }
+    }
+
+    .cards {
+        @include m.tablet {
+            @include m.grid(3, 1rem);
+        }
+
+        
+    }
+}
+
+.card {
+    background-color: v.$blanco;
+    margin-bottom: 2rem;
+    &__title {
+        aspect-ratio: 10/6;
+        display: flex;
+        align-items: end;
+        background-position-y: -25.05px;
+        background-size: auto 150%;
+        
+        h3 {
+            color: v.$blanco;
+            margin: 0 0 1rem 1rem;
+        }
+    }
+
+    .info {
+        padding: 1.5rem;
+        margin: 0;
+        &__p {
+            margin: 2rem 0 0;
+            color: v.$negro;
+        }
+
+        &__price {
+            font-size: 3rem;
+            margin: 0
+        }
+
+        &__btn {
+            @include m.boton (v.$secundario, v.$blanco, uppercase)
+        }
+
+    }
+}

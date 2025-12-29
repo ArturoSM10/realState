@@ -1,7 +1,7 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-.header {
+.avif .header {
     background-image: linear-gradient(to right, rgba(v.$primario, 0.9), rgba(v.$primario, 0.9)), url('../img/header_bg.avif');
 }
 

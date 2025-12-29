@@ -1,4 +1,5 @@
 @use 'variables' as v;
+@use 'sass:color';
 
 @mixin telefono {
     @media (min-width: v.$telefono) {
@@ -33,7 +34,7 @@
     color: $texto;
     text-decoration: none;
     border: none;
-
+    margin-top: 2rem;
     padding: 1.5rem 4rem;
     text-transform: $decoration;
     font-weight: 700;
