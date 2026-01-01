@@ -1,0 +1,52 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.footer {
+    background-color: v.$primario;
+    padding-top: 5rem;
+
+    &__contenedor {
+        color: v.$blanco;
+        @include m.tablet {
+            @include m.grid(3, 2rem);
+        }
+    }
+
+    &-menu {
+        &__title {
+            margin: 2rem 0;
+            text-transform: uppercase;
+            font-size: 2rem;
+        }
+
+        &__element {
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+    }
+
+    &-nosotros {
+        &__title {
+            margin: 2rem 0;
+            text-transform: uppercase;
+            font-size: 2rem;
+        }
+
+        &__p {
+            color: v.$blanco;
+            font-size: 1.6rem;
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    .derechos {
+        background-color: v.$secundario;
+        text-align: center;
+        color: v.$blanco;
+        margin: 5rem 0 0;
+        padding: 1rem 0; 
+    }
+}
