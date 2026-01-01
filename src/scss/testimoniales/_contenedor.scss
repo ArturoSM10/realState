@@ -1,0 +1,26 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.testimoniales {
+    padding: 5rem 0;
+    background-color: v.$grisClaro;
+
+    &__contenedor {
+        @include m.desktop {
+            @include m.grid(2, 5rem);
+            grid-template-columns: 30% 70%;
+    
+        }
+    }
+    // .blog {
+    //     @include m.desktop {
+    //         grid-template-columns: 2/3;
+    //     }
+    // }
+
+    // .testimonial {
+    //     @include m.desktop {
+    //         grid-template-columns: 1/2;
+    //     }
+    // }
+}

@@ -1,0 +1,55 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.blog {
+
+    &__title {
+        font-weight: 400;
+        margin: 2rem 0;
+
+        span {
+            display: block;
+        }
+
+        &::after {
+            @include m.title;
+        }
+    }
+}
+
+.blog-card {
+    margin-bottom: 2rem;
+    @include m.tablet {
+        @include m.grid(2, 0);
+        grid-template-columns: 40% 60%;
+    }
+
+    img {
+        height: 30rem;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    &__info {
+        background-color: v.$blanco;
+        padding: 1rem;
+        @include m.tablet {
+        }
+    }
+
+    &__title {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    &__date {
+        font-size: 1.4rem;
+    }
+
+    a {
+        @include m.boton (v.$primario, v.$blanco, capitalize);
+        @include m.tablet {
+            width: fit-content;
+    }
+    }
+}
