@@ -34,6 +34,9 @@
         background-color: v.$blanco;
         padding: 1rem;
         @include m.tablet {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
     }
 
